@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFThemes"
+             xmlns:vm="clr-namespace:XFThemes.ViewModels"
+             x:Class="XFThemes.DashboardPage"
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.BindingContext>
+        <vm:DashboardViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Theme" Order="Secondary" Command="{Binding ThemeSelectionPageCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="70"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <Frame Margin="15" CornerRadius="50" HeightRequest="60" WidthRequest="60" VerticalOptions="End" HorizontalOptions="End">
+                        <Image Source="profile.jpeg" HeightRequest="100" WidthRequest="100" Margin="-40">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
+                    <Grid BackgroundColor="{DynamicResource PrimaryColor}">
+                        <Label VerticalOptions="End" Margin="15" Style="{StaticResource OverlayTitleLabelStyle}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Welcome back Maria,"/>
+                                    <Span Text="&#x0a;"/>
+                                    <Span Text="Everything looks good today."/>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </Grid>
+                </Grid>
+                <Grid Grid.Row="1" VerticalOptions="Start"  Margin="0,-6,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="1"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="1"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
+                    <BoxView Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
+                    <BoxView Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
+                    <BoxView Grid.Column="1" Grid.RowSpan="5" Style="{StaticResource VerticalSeparatorLineStyle}"/>
+                    <Label Grid.Row="1" Grid.Column="0" VerticalOptions="Start" Margin="25">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="36.75" Style="{StaticResource BigLabelStyle}"/>
+                                <Span Text=" &#186;C" FontSize="20" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="Temperature" Style="{StaticResource SubLabelStyle}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="1" Grid.Column="2" VerticalOptions="Start" Margin="25">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="560" Style="{StaticResource BigLabelStyle}"/>
+                                <Span Text=" cal" FontSize="20" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="Calories burned" Style="{StaticResource SubLabelStyle}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="3" Grid.Column="0" VerticalOptions="Start" Margin="25">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="3350" Style="{StaticResource BigLabelStyle}"/>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="Steps" Style="{StaticResource SubLabelStyle}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label Grid.Row="3" Grid.Column="2" VerticalOptions="Start" Margin="25">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="87" Style="{StaticResource BigLabelStyle}"/>
+                                <Span Text=" bpm" FontSize="20" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Text="&#x0a;"/>
+                                <Span Text="Heart rate" Style="{StaticResource SubLabelStyle}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </Grid>
+                <Button Grid.Row="2" Text="Profile" Command="{Binding GoToProfilePageCommand}" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource PrimaryButtonStyle}"/>
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

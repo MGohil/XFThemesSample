@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFThemes.ThemeSelectionPage"
+             xmlns:local="clr-namespace:XFThemes"
+             xmlns:vm="clr-namespace:XFThemes.ViewModels"
+             Title="{Binding Title}"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+    <ContentPage.BindingContext>
+        <vm:ThemeSelectionViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ListView ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" RowHeight="70" SeparatorColor="{StaticResource SeparatorLineColor}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Margin="10" VerticalOptions="Center">
+                            <Label Style="{StaticResource TitleLabelStyle}">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Title}"/>
+                                        <Span Text="&#x0a;"/>
+                                        <Span Text="{Binding Description}" Style="{StaticResource SubLabelStyle}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                            <BoxView IsVisible="{Binding IsSelected, Mode=TwoWay}" CornerRadius="10" HeightRequest="20" WidthRequest="20" VerticalOptions="Center" HorizontalOptions="End" BackgroundColor="{DynamicResource PrimaryColor}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

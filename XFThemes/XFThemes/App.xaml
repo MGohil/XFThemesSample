@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFThemes.App">
+	<Application.Resources>
+        <ResourceDictionary >
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary x:Key="ThemeResourceDictionary" Source="ThemeResources\LightTheme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+                <Setter Property="BarTextColor" Value="{DynamicResource PrimaryTintColor}"/>
+            </Style>
+
+            <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTintColor}"/>
+                <Setter Property="HeightRequest" Value="40"/>
+                <Setter Property="WidthRequest" Value="200"/>
+                <Setter Property="CornerRadius" Value="20"/>
+            </Style>
+
+            <Style x:Key="TitleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}"/>
+            </Style>
+
+            <Style x:Key="OverlayTitleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="{DynamicResource OverlayTextColor}"/>
+            </Style>
+
+            <Style x:Key="BigLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+            </Style>
+
+            <Style x:Key="MediumLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}"/>
+            </Style>
+
+            <Style x:Key="SubLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextColor" Value="{DynamicResource SubTextColor}"/>
+            </Style>
+            <Style x:Key="HorizontalSeparatorLineStyle" TargetType="BoxView">
+                <Setter Property="HeightRequest" Value="1"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource SeparatorLineColor}"/>
+            </Style>
+
+            <Style x:Key="VerticalSeparatorLineStyle" TargetType="BoxView">
+                <Setter Property="WidthRequest" Value="1"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource SeparatorLineColor}"/>
+            </Style>
+
+        </ResourceDictionary>
+        
+        
+        
+        
+    </Application.Resources>
+</Application>
