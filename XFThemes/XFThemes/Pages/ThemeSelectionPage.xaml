@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              x:Class="XFThemes.ThemeSelectionPage"
              xmlns:local="clr-namespace:XFThemes"
              xmlns:vm="clr-namespace:XFThemes.ViewModels"
@@ -10,7 +11,7 @@
         <vm:ThemeSelectionViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" RowHeight="70" SeparatorColor="{StaticResource SeparatorLineColor}">
+        <ListView ItemsSource="{Binding Themes}" SelectedItem="{Binding SelectedTheme, Mode=TwoWay}" RowHeight="70" SeparatorColor="{StaticResource SeparatorLineColor}" BackgroundColor="Transparent" ios:ListView.SeparatorStyle="FullWidth" Footer="">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

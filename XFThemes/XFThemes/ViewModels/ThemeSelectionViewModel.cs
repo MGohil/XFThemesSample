@@ -15,7 +15,8 @@ namespace XFThemes.ViewModels
                 new AppTheme() { ThemeId = ThemeManager.Themes.Light, Title = "Light Theme", Description = "Gives a light theme experience" },
                 new AppTheme() { ThemeId = ThemeManager.Themes.Dark, Title = "Dark Theme", Description = "Gives a dark theme experience" },
                 new AppTheme() { ThemeId = ThemeManager.Themes.Blue, Title = "Blue Theme", Description = "Gives a blue theme experience" },
-                new AppTheme() { ThemeId = ThemeManager.Themes.Orange, Title = "Orange Theme", Description = "Gives an orange theme experience" }
+                new AppTheme() { ThemeId = ThemeManager.Themes.Orange, Title = "Orange Theme", Description = "Gives an orange theme experience" },
+                new AppTheme() { ThemeId = ThemeManager.Themes.White, Title = "White Theme", Description = "Gives a white theme experience" }
             };
 
             var selectedTheme = Themes.FirstOrDefault(x => x.ThemeId == ThemeManager.CurrentTheme());

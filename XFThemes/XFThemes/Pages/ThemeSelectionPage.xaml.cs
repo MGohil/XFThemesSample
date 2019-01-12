@@ -1,6 +1,5 @@
 ﻿using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using XFThemes.Models;
 
 namespace XFThemes
 {
@@ -10,13 +9,6 @@ namespace XFThemes
         public ThemeSelectionPage()
         {
             InitializeComponent();
-        }
-
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            ThemeManager.ChangeTheme((e.Item as AppTheme).ThemeId);
-            (sender as ListView).SelectedItem = null;
-            //Application.Current.MainPage = new NavigationPage(new DashboardPage());
         }
     }
 }

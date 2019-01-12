@@ -1,1 +1,9 @@
 .vs/
+packages/
+XFThemes/XFThemes.Android/obj/
+XFThemes/XFThemes.Android/bin/
+XFThemes/XFThemes.iOS/obj/
+XFThemes/XFThemes.UWP/obj/
+XFThemes/XFThemes/bin/
+XFThemes/XFThemes/obj/
+XFThemes/XFThemes.iOS/bin/

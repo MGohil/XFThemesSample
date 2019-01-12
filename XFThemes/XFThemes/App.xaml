@@ -9,7 +9,7 @@
             </ResourceDictionary.MergedDictionaries>
 
             <Style TargetType="NavigationPage">
-                <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource NavigationBarColor}"/>
                 <Setter Property="BarTextColor" Value="{DynamicResource PrimaryTintColor}"/>
             </Style>
 

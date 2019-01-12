@@ -35,6 +35,19 @@
     <item name="colorAccent">#FF4081</item>
   </style>
 
+  <!--DarkToolbar : ThemeOverlay.AppCompat.Dark.Actionbar-->
+  <!--LightToolbar : ThemeOverlay.AppCompat.Light-->
+  <!--TODO : For the Toolbar icon color we need to assign this style to the Toolbar.axml style-->
+  <style name="themableToolbarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+    <!--Toolbar Title Text Color (Actually to be used for Toolbar Icon color)-->
+    <item name="android:textColorPrimary">#ed1313</item>
+    <!--Toolbar Popup Menu Text Color-->
+    <item name="actionMenuTextColor">#00a113</item>
+    <!--Toolbar Overflow Menu Color-->
+    <item name="android:textColorSecondary">#fd0fb9</item>
+  </style>
+  
+  
   <!--Transperent(No Color)-->
   <color name="ListViewSelectedItemColor">#00000000</color>
   <color name="ListViewHighlightedItemColor">#00000000</color>

@@ -10,27 +10,20 @@
         <vm:DashboardViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Theme" Order="Secondary" Command="{Binding ThemeSelectionPageCommand}"/>
+        <ToolbarItem Text="Theme" Icon="theme" Command="{Binding ThemeSelectionPageCommand}"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="150"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="70"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <Frame Margin="15" CornerRadius="50" HeightRequest="60" WidthRequest="60" VerticalOptions="End" HorizontalOptions="End">
-                        <Image Source="profile.jpeg" HeightRequest="100" WidthRequest="100" Margin="-40">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1"/>
-                            </Image.GestureRecognizers>
-                        </Image>
-                    </Frame>
                     <Grid BackgroundColor="{DynamicResource PrimaryColor}">
-                        <Label VerticalOptions="End" Margin="15" Style="{StaticResource OverlayTitleLabelStyle}">
+                        <Label VerticalOptions="End" Margin="15" FontSize="20" TextColor="{DynamicResource PrimaryTintColor}">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="Welcome back Maria,"/>
@@ -40,13 +33,20 @@
                             </Label.FormattedText>
                         </Label>
                     </Grid>
+                    <Frame Margin="15" IsClippedToBounds="true" CornerRadius="50" HeightRequest="60" WidthRequest="60" VerticalOptions="End" HorizontalOptions="End">
+                        <Image Source="profile.jpeg" HeightRequest="100" WidthRequest="100" Margin="-40">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </Frame>
                 </Grid>
                 <Grid Grid.Row="1" VerticalOptions="Start"  Margin="0,-6,0,0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1"/>
-                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="1"/>
-                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="1"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>

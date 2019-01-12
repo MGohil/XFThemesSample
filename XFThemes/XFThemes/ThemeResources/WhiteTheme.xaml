@@ -1,37 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XFThemes.ThemeResources.BlueTheme">
-    <!--Blue-->
-    <Color x:Key="PrimaryColor">#120064</Color>
-
-    <!--Dark Blue-->
-    <Color x:Key="PrimaryDarkColor">#090030</Color>
-
-    <!--White-->
-    <Color x:Key="PrimaryTintColor">#FFFFFF</Color>
-
-    <!--Blue-->
-    <Color x:Key="NavigationBarColor">#120064</Color>
-
+             x:Class="XFThemes.ThemeResources.WhiteTheme">
+    <!--Light Grey-->
+    <Color x:Key="PrimaryColor">#f0f0f0</Color>
+    
+    <!--Medium Grey-->
+    <Color x:Key="PrimaryDarkColor">#d2d2d2</Color>
+    
+    <!--Dark Grey-->
+    <Color x:Key="PrimaryTintColor">#1d1d1d</Color>
+    
     <!--White-->
     <Color x:Key="PageBackgroundColor">#FFFFFF</Color>
 
+    <!--Light Grey-->
+    <Color x:Key="NavigationBarColor">#f0f0f0</Color>
+
     <!--Dark Grey-->
     <Color x:Key="PrimaryTextColor">#3f3f3f</Color>
-
+    
     <!--Mid Grey-->
     <Color x:Key="SecondaryTextColor">#6e6e6e</Color>
-
+    
     <!--Mid-Light Grey-->
     <Color x:Key="SubTextColor">#969696</Color>
-
+    
     <!--White-->
     <Color x:Key="OverlayTextColor">#FFFFFF</Color>
-
+    
     <!--Transperant Black-->
     <Color x:Key="TransperantBackgroundColor">#56000000</Color>
-
+    
     <!--Silver Light Grey-->
     <Color x:Key="SeparatorLineColor">#ececec</Color>
 </ResourceDictionary>

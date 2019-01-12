@@ -11,7 +11,8 @@ namespace XFThemes
             Light,
             Dark,
             Blue,
-            Orange
+            Orange,
+            White
         }
 
       
@@ -42,6 +43,11 @@ namespace XFThemes
                     case Themes.Orange:
                         {
                             mergedDictionaries.Add(new OrangeTheme());
+                            break;
+                        }
+                    case Themes.White:
+                        {
+                            mergedDictionaries.Add(new WhiteTheme());
                             break;
                         }
                     default:
