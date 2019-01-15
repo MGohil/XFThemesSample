@@ -7,8 +7,11 @@ namespace XFThemes
         public App()
         {
             InitializeComponent();
+
+            //It is necessary to load the theme when the app launches. It identifies the last selected/stored theme and based on that, it loads the proper theme resources.
             ThemeManager.LoadTheme();
-            MainPage = new NavigationPage(new XFThemes.DashboardPage());
+
+            MainPage = new NavigationPage(new DashboardPage());
         }
 
         protected override void OnStart()

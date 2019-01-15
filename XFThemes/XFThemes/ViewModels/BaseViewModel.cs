@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-
-namespace XFThemes.ViewModels
+﻿namespace XFThemes.ViewModels
 {
     public class BaseViewModel : ObservableObject
     {

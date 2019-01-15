@@ -10,6 +10,7 @@ namespace XFThemes.ViewModels
         {
             Title = "Select Theme";
 
+            //Initialize the List with the theme details, you want to add in the app
             Themes = new List<AppTheme>()
             {
                 new AppTheme() { ThemeId = ThemeManager.Themes.Light, Title = "Light Theme", Description = "Gives a light theme experience" },
@@ -19,6 +20,7 @@ namespace XFThemes.ViewModels
                 new AppTheme() { ThemeId = ThemeManager.Themes.White, Title = "White Theme", Description = "Gives a white theme experience" }
             };
 
+            //Find the Current/Last selected theme, and set the IsSelected property for that specific theme item in the list.
             var selectedTheme = Themes.FirstOrDefault(x => x.ThemeId == ThemeManager.CurrentTheme());
             selectedTheme.IsSelected = true;
         }
@@ -41,6 +43,10 @@ namespace XFThemes.ViewModels
             }
         }
 
+        /// <summary>
+        /// Invokes when you select any Theme from the ListView
+        /// </summary>
+        /// <param name="selectedTheme"></param>
         private void OnThemeSelected(AppTheme selectedTheme)
         {
             foreach (var t in Themes)

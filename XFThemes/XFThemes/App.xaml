@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:themes="clr-namespace:XFThemes.ThemeResources"
              x:Class="XFThemes.App">
 	<Application.Resources>
-        <ResourceDictionary >
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary x:Key="ThemeResourceDictionary" Source="ThemeResources\LightTheme.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-
+        <ResourceDictionary MergedWith="themes:LightTheme">
+            
+            <!--Sets the colors of Navigationbar's (Toolbar's) TextColor and Background Color-->
             <Style TargetType="NavigationPage">
                 <Setter Property="BarBackgroundColor" Value="{DynamicResource NavigationBarColor}"/>
                 <Setter Property="BarTextColor" Value="{DynamicResource PrimaryTintColor}"/>
@@ -56,9 +55,5 @@
             </Style>
 
         </ResourceDictionary>
-        
-        
-        
-        
     </Application.Resources>
 </Application>

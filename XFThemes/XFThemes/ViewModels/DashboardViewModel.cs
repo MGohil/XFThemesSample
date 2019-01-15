@@ -1,5 +1,4 @@
-﻿using System;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace XFThemes.ViewModels
 {
@@ -12,12 +11,18 @@ namespace XFThemes.ViewModels
             GoToProfilePageCommand = new Command(GoToProfilePageCommandExecute);
         }
 
+        /// <summary>
+        /// Command to invoke when you want to navigate to the ThemeSelection page
+        /// </summary>
         public Command ThemeSelectionPageCommand { get; set; }
-        private void ThemeSelectionPageCommandExecute(object obj)
+        private void ThemeSelectionPageCommandExecute()
         {
             Application.Current.MainPage.Navigation.PushAsync(new ThemeSelectionPage());
         }
 
+        /// <summary>
+        /// Command to invoke when you want to navigate to Profile page
+        /// </summary>
         public Command GoToProfilePageCommand { get; set; }
         private void GoToProfilePageCommandExecute()
         {
