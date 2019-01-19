@@ -23,12 +23,12 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <Grid BackgroundColor="{DynamicResource PrimaryColor}">
-                        <Label VerticalOptions="End" Margin="15" FontSize="20" TextColor="{DynamicResource PrimaryTintColor}">
+                        <Label VerticalOptions="End" Margin="15" FontSize="20">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Welcome back Maria,"/>
+                                    <Span Text="Welcome back Maria," TextColor="{DynamicResource PrimaryTintColor}"/>
                                     <Span Text="&#x0a;"/>
-                                    <Span Text="Everything looks good today."/>
+                                    <Span Text="Everything looks good today." TextColor="{DynamicResource PrimaryTintColor}"/>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
