@@ -9,6 +9,13 @@
     <ContentPage.BindingContext>
         <vm:MyProfileViewModel/>
     </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="editprofile" Text="Edit"/>
+        <ToolbarItem Text="SAVE"/>
+        <ToolbarItem Text="Option 1" Priority="1" Order="Secondary"/>
+        <ToolbarItem Text="Option 2" Priority="2" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
         <ScrollView>
             <Grid>

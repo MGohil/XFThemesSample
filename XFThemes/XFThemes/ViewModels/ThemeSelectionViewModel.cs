@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Xamarin.Forms;
+using XFThemes.Dependencies;
 using XFThemes.Models;
 
 namespace XFThemes.ViewModels
@@ -54,6 +56,13 @@ namespace XFThemes.ViewModels
                 t.IsSelected = t.ThemeId == selectedTheme.ThemeId;
             }
             ThemeManager.ChangeTheme(selectedTheme.ThemeId);
+
+            //For Android we need some Platform specific twicks for Android Toolbar. 
+            //Apply this platform specific change by invoking following DependencyService
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                DependencyService.Get<INativeServices>().OnThemeChanged(selectedTheme.ThemeId);
+            }
         }
     }
 }
