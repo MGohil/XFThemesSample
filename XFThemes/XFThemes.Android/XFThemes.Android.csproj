@@ -176,12 +176,6 @@
     <AndroidResource Include="Resources\values\attr.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\edit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\edit1.svg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\editprofile.png" />
   </ItemGroup>
   <ItemGroup>
