@@ -10,10 +10,48 @@
         <vm:MyProfileViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
+        <!--ToolbarItem as Icon-->
         <ToolbarItem Icon="editprofile" Text="Edit"/>
+        <!--ToolbarItem as simple Text-->
         <ToolbarItem Text="SAVE"/>
-        <ToolbarItem Text="Option 1" Priority="1" Order="Secondary"/>
-        <ToolbarItem Text="Option 2" Priority="2" Order="Secondary"/>
+        <!--Only for Android : Secondary ToolbarItems as popup-->
+        <ToolbarItem Text="Option 1">
+            <ToolbarItem.Priority>
+                <OnPlatform x:TypeArguments="x:Int32">
+                    <On Platform="Android" Value="1"/>
+                </OnPlatform>
+            </ToolbarItem.Priority>
+            <ToolbarItem.Order>
+                <OnPlatform x:TypeArguments="ToolbarItemOrder">
+                    <On Platform="Android" Value="Secondary"/>
+                </OnPlatform>
+            </ToolbarItem.Order>
+        </ToolbarItem>
+        <ToolbarItem Text="Option 2">
+            <ToolbarItem.Priority>
+                <OnPlatform x:TypeArguments="x:Int32">
+                    <On Platform="Android" Value="2"/>
+                </OnPlatform>
+            </ToolbarItem.Priority>
+            <ToolbarItem.Order>
+                <OnPlatform x:TypeArguments="ToolbarItemOrder">
+                    <On Platform="Android" Value="Secondary"/>
+                </OnPlatform>
+            </ToolbarItem.Order>
+        </ToolbarItem>
+        <ToolbarItem Text="Option 3">
+            <ToolbarItem.Priority>
+                <OnPlatform x:TypeArguments="x:Int32">
+                    <On Platform="Android" Value="3"/>
+                </OnPlatform>
+            </ToolbarItem.Priority>
+            <ToolbarItem.Order>
+                <OnPlatform x:TypeArguments="ToolbarItemOrder">
+                    <On Platform="Android" Value="Secondary"/>
+                </OnPlatform>
+            </ToolbarItem.Order>
+        </ToolbarItem>
+
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
