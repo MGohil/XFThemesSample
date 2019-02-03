@@ -2,18 +2,20 @@
 using Android.Graphics;
 using Android.Views;
 using System.Linq;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using XFThemes.Droid.Renderers;
 
-namespace XFThemes.Droid.Helpers
+[assembly: ExportRenderer(typeof(ContentPage), typeof(DroidContentPageRenderer))]
+namespace XFThemes.Droid.Renderers
 {
-    public static class ToolbarHelper
+    /// <summary>
+    /// This renderer is created to handle the theming of the Android Toolbar
+    /// On Constructor, it calls the method which does theme specific settings for Toolbar icons
+    /// </summary>
+    public class DroidContentPageRenderer : PageRenderer
     {
-        /// <summary>
-        /// Sets the color of the Toolbar custom icons
-        /// This uses the "PrimaryTintColor" as an icon color
-        /// </summary>
-        /// <param name="context"></param>
-        public static void ThemifyToolbar(Context context)
+        public DroidContentPageRenderer(Context context) : base(context)
         {
             if (context == null) context = MainActivity.Instance;
 
@@ -42,6 +44,17 @@ namespace XFThemes.Droid.Helpers
                         item.Icon?.SetColorFilter(colorFilter);
                     }
                 }
+            }
+        }
+
+        protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
+        {
+            base.OnElementChanged(e);
+
+            if (e.OldElement != null || Element == null)
+            {
+                if (Element == null)
+                    return;
             }
         }
     }

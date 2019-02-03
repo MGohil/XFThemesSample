@@ -9,51 +9,9 @@
     <ContentPage.BindingContext>
         <vm:MyProfileViewModel/>
     </ContentPage.BindingContext>
-    <ContentPage.ToolbarItems>
-        <!--ToolbarItem as Icon-->
-        <ToolbarItem Icon="editprofile" Text="Edit"/>
-        <!--ToolbarItem as simple Text-->
-        <ToolbarItem Text="SAVE"/>
-        <!--Only for Android : Secondary ToolbarItems as popup-->
-        <ToolbarItem Text="Option 1">
-            <ToolbarItem.Priority>
-                <OnPlatform x:TypeArguments="x:Int32">
-                    <On Platform="Android" Value="1"/>
-                </OnPlatform>
-            </ToolbarItem.Priority>
-            <ToolbarItem.Order>
-                <OnPlatform x:TypeArguments="ToolbarItemOrder">
-                    <On Platform="Android" Value="Secondary"/>
-                </OnPlatform>
-            </ToolbarItem.Order>
-        </ToolbarItem>
-        <ToolbarItem Text="Option 2">
-            <ToolbarItem.Priority>
-                <OnPlatform x:TypeArguments="x:Int32">
-                    <On Platform="Android" Value="2"/>
-                </OnPlatform>
-            </ToolbarItem.Priority>
-            <ToolbarItem.Order>
-                <OnPlatform x:TypeArguments="ToolbarItemOrder">
-                    <On Platform="Android" Value="Secondary"/>
-                </OnPlatform>
-            </ToolbarItem.Order>
-        </ToolbarItem>
-        <ToolbarItem Text="Option 3">
-            <ToolbarItem.Priority>
-                <OnPlatform x:TypeArguments="x:Int32">
-                    <On Platform="Android" Value="3"/>
-                </OnPlatform>
-            </ToolbarItem.Priority>
-            <ToolbarItem.Order>
-                <OnPlatform x:TypeArguments="ToolbarItemOrder">
-                    <On Platform="Android" Value="Secondary"/>
-                </OnPlatform>
-            </ToolbarItem.Order>
-        </ToolbarItem>
-
-    </ContentPage.ToolbarItems>
-
+    
+    <!-- ToolbarItems are set in code behid -->
+    
     <ContentPage.Content>
         <ScrollView>
             <Grid>
@@ -62,14 +20,14 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <Image Source="profile.jpeg" Aspect="AspectFill"/>
+                    <Image Source="monkey.jpg" Aspect="AspectFill"/>
                     <Grid BackgroundColor="{DynamicResource TransperantBackgroundColor}">
                         <Label VerticalOptions="End" Margin="15" Style="{StaticResource OverlayTitleLabelStyle}" FontSize="30">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Maria"/>
+                                    <Span Text="Milan"/>
                                     <Span Text="&#x0a;"/>
-                                    <Span Text="Hernandez"/>
+                                    <Span Text="Gohil"/>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>

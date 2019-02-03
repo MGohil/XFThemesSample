@@ -26,15 +26,15 @@
                         <Label VerticalOptions="End" Margin="15" FontSize="20">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Welcome back Maria," TextColor="{DynamicResource PrimaryTintColor}"/>
+                                    <Span Text="Welcome to Xamarin Themes Sample," TextColor="{DynamicResource PrimaryTintColor}"/>
                                     <Span Text="&#x0a;"/>
-                                    <Span Text="Everything looks good today." TextColor="{DynamicResource PrimaryTintColor}"/>
+                                    <Span Text="It looks cool, yeah!!" TextColor="{DynamicResource PrimaryTintColor}"/>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
                     </Grid>
                     <Frame Margin="15" IsClippedToBounds="true" CornerRadius="50" HeightRequest="60" WidthRequest="60" VerticalOptions="End" HorizontalOptions="End">
-                        <Image Source="profile.jpeg" HeightRequest="100" WidthRequest="100" Margin="-40">
+                        <Image Source="monkeyprofile.jpg" HeightRequest="100" WidthRequest="100" Margin="-40">
                             <Image.GestureRecognizers>
                                 <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1"/>
                             </Image.GestureRecognizers>
