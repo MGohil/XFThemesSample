@@ -148,9 +148,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\profile.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\theme.png" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +164,12 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\editprofile%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkey.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\monkeyprofile.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
