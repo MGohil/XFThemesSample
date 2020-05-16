@@ -1,114 +1,173 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XFThemes"
-             xmlns:vm="clr-namespace:XFThemes.ViewModels"
-             x:Class="XFThemes.MyProfilePage"
-             Title="{Binding Title}"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+<ContentPage
+    x:Class="XFThemes.MyProfilePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XFThemes"
+    xmlns:vm="clr-namespace:XFThemes.ViewModels"
+    Title="{Binding Title}"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.BindingContext>
-        <vm:MyProfileViewModel/>
+        <vm:MyProfileViewModel />
     </ContentPage.BindingContext>
-    
-    <!-- ToolbarItems are set in code behid -->
-    
+
+    <!--  ToolbarItems are set in code behid  -->
+
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="300"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="300" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <Image Source="monkey.jpg" Aspect="AspectFill"/>
+                    <Image Aspect="AspectFill" Source="monkey.jpg" />
                     <Grid BackgroundColor="{DynamicResource TransperantBackgroundColor}">
-                        <Label VerticalOptions="End" Margin="15" Style="{StaticResource OverlayTitleLabelStyle}" FontSize="30">
+                        <Label
+                            Margin="15"
+                            FontSize="30"
+                            Style="{StaticResource OverlayTitleLabelStyle}"
+                            VerticalOptions="End">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Milan"/>
-                                    <Span Text="&#x0a;"/>
-                                    <Span Text="Gohil"/>
+                                    <Span Text="Milan" />
+                                    <Span Text="&#x0a;" />
+                                    <Span Text="Gohil" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
                     </Grid>
                 </Grid>
-                <Grid Grid.Row="1" VerticalOptions="Start"  Margin="0,-6,0,0">
+                <Grid
+                    Grid.Row="1"
+                    Margin="0,-6,0,0"
+                    VerticalOptions="Start">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1"/>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="1"/>
-                        <RowDefinition Height="100"/>
-                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="1" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="1"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="1"/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <BoxView Grid.Row="0" Grid.ColumnSpan="5" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
-                    <BoxView Grid.Row="2" Grid.ColumnSpan="5" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
-                    <BoxView Grid.Row="4" Grid.ColumnSpan="5" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
-                    <BoxView Grid.Column="1" Grid.RowSpan="5" Style="{StaticResource VerticalSeparatorLineStyle}"/>
-                    <BoxView Grid.Column="3" Grid.RowSpan="5" Style="{StaticResource VerticalSeparatorLineStyle}"/>
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.ColumnSpan="5"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="2"
+                        Grid.ColumnSpan="5"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="4"
+                        Grid.ColumnSpan="5"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.RowSpan="5"
+                        Grid.Column="1"
+                        Style="{StaticResource VerticalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.RowSpan="5"
+                        Grid.Column="3"
+                        Style="{StaticResource VerticalSeparatorLineStyle}" />
 
-                    <Label Grid.Row="1" Grid.Column="0" VerticalOptions="Start" Margin="15">
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="15"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="22" Style="{StaticResource MediumLabelStyle}"/>
-                                <Span Text=" years" FontSize="15" Style="{StaticResource SubLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Age" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource MediumLabelStyle}" Text="22" />
+                                <Span
+                                    FontSize="15"
+                                    Style="{StaticResource SubLabelStyle}"
+                                    Text=" years" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Age" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="1" Grid.Column="2" VerticalOptions="Start" Margin="15">
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="15"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="A" Style="{StaticResource MediumLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Blood Group" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource MediumLabelStyle}" Text="A" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Blood Group" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="1" Grid.Column="4" VerticalOptions="Start" Margin="15">
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="4"
+                        Margin="15"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="20.4" Style="{StaticResource MediumLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="BMI" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource MediumLabelStyle}" Text="20.4" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="BMI" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="3" Grid.Column="0" VerticalOptions="Start" Margin="15">
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="15"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="172" Style="{StaticResource MediumLabelStyle}"/>
-                                <Span Text=" cm" FontSize="15" Style="{StaticResource SubLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Height" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource MediumLabelStyle}" Text="172" />
+                                <Span
+                                    FontSize="15"
+                                    Style="{StaticResource SubLabelStyle}"
+                                    Text=" cm" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Height" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="3" Grid.Column="2" VerticalOptions="Start" Margin="15">
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Margin="15"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="53" Style="{StaticResource MediumLabelStyle}"/>
-                                <Span Text=" kg" FontSize="15" Style="{StaticResource SubLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Weight" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource MediumLabelStyle}" Text="53" />
+                                <Span
+                                    FontSize="15"
+                                    Style="{StaticResource SubLabelStyle}"
+                                    Text=" kg" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Weight" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="3" Grid.Column="4" VerticalOptions="Start" Margin="15">
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="4"
+                        Margin="15"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="21" Style="{StaticResource MediumLabelStyle}"/>
-                                <Span Text=" %" FontSize="15" Style="{StaticResource SubLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Fat" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource MediumLabelStyle}" Text="21" />
+                                <Span
+                                    FontSize="15"
+                                    Style="{StaticResource SubLabelStyle}"
+                                    Text=" %" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Fat" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>

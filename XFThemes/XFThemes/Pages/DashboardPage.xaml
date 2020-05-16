@@ -1,104 +1,176 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XFThemes"
-             xmlns:vm="clr-namespace:XFThemes.ViewModels"
-             x:Class="XFThemes.DashboardPage"
-             Title="{Binding Title}"
-             BackgroundColor="{DynamicResource PageBackgroundColor}">
+<ContentPage
+    x:Class="XFThemes.DashboardPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:XFThemes"
+    xmlns:vm="clr-namespace:XFThemes.ViewModels"
+    Title="{Binding Title}"
+    BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.BindingContext>
-        <vm:DashboardViewModel/>
+        <vm:DashboardViewModel />
     </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Theme" Icon="theme" Command="{Binding ThemeSelectionPageCommand}"/>
+        <ToolbarItem
+            Command="{Binding ThemeSelectionPageCommand}"
+            Icon="theme"
+            Text="Theme" />
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="150"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="150" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="70" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <Grid BackgroundColor="{DynamicResource PrimaryColor}">
-                        <Label VerticalOptions="End" Margin="15" FontSize="20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Grid.Column="0"
+                            Margin="15"
+                            FontSize="Large"
+                            VerticalOptions="End">
                             <Label.FormattedText>
                                 <FormattedString>
-                                    <Span Text="Welcome to Xamarin Themes Sample," TextColor="{DynamicResource PrimaryTintColor}"/>
-                                    <Span Text="&#x0a;"/>
-                                    <Span Text="It looks cool, yeah!!" TextColor="{DynamicResource PrimaryTintColor}"/>
+                                    <Span Text="Welcome to Xamarin Themes Sample," TextColor="{DynamicResource PrimaryTintColor}" />
+                                    <Span Text="&#x0a;" />
+                                    <Span Text="It looks cool, yeah!!" TextColor="{DynamicResource PrimaryTintColor}" />
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
+                        <Frame
+                            Grid.Column="1"
+                            Margin="15"
+                            CornerRadius="50"
+                            HasShadow="False"
+                            HeightRequest="60"
+                            HorizontalOptions="End"
+                            IsClippedToBounds="True"
+                            VerticalOptions="End"
+                            WidthRequest="60">
+                            <Image
+                                Margin="-40"
+                                HeightRequest="100"
+                                Source="monkeyprofile.jpg"
+                                WidthRequest="100">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Frame>
                     </Grid>
-                    <Frame Margin="15" IsClippedToBounds="true" CornerRadius="50" HeightRequest="60" WidthRequest="60" VerticalOptions="End" HorizontalOptions="End">
-                        <Image Source="monkeyprofile.jpg" HeightRequest="100" WidthRequest="100" Margin="-40">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1"/>
-                            </Image.GestureRecognizers>
-                        </Image>
-                    </Frame>
+
                 </Grid>
-                <Grid Grid.Row="1" VerticalOptions="Start"  Margin="0,-6,0,0">
+                <Grid
+                    Grid.Row="1"
+                    Margin="0,-6,0,0"
+                    VerticalOptions="Start">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="1"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="1"/>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="1"/>
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="1" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="1"/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="1" />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <BoxView Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
-                    <BoxView Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
-                    <BoxView Grid.Row="4" Grid.ColumnSpan="3" Style="{StaticResource HorizontalSeparatorLineStyle}"/>
-                    <BoxView Grid.Column="1" Grid.RowSpan="5" Style="{StaticResource VerticalSeparatorLineStyle}"/>
-                    <Label Grid.Row="1" Grid.Column="0" VerticalOptions="Start" Margin="25">
+                    <BoxView
+                        Grid.Row="0"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="2"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.Row="4"
+                        Grid.ColumnSpan="3"
+                        Style="{StaticResource HorizontalSeparatorLineStyle}" />
+                    <BoxView
+                        Grid.RowSpan="5"
+                        Grid.Column="1"
+                        Style="{StaticResource VerticalSeparatorLineStyle}" />
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="25"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="36.75" Style="{StaticResource BigLabelStyle}"/>
-                                <Span Text=" &#186;C" FontSize="20" Style="{StaticResource SubLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Temperature" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="36.75" />
+                                <Span
+                                    FontSize="20"
+                                    Style="{StaticResource SubLabelStyle}"
+                                    Text=" &#186;C" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Temperature" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="1" Grid.Column="2" VerticalOptions="Start" Margin="25">
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Margin="25"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="560" Style="{StaticResource BigLabelStyle}"/>
-                                <Span Text=" cal" FontSize="20" Style="{StaticResource SubLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Calories burned" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="560" />
+                                <Span
+                                    FontSize="20"
+                                    Style="{StaticResource SubLabelStyle}"
+                                    Text=" cal" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Calories burned" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="3" Grid.Column="0" VerticalOptions="Start" Margin="25">
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="0"
+                        Margin="25"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="3350" Style="{StaticResource BigLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Steps" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="3350" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Steps" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    <Label Grid.Row="3" Grid.Column="2" VerticalOptions="Start" Margin="25">
+                    <Label
+                        Grid.Row="3"
+                        Grid.Column="2"
+                        Margin="25"
+                        VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="87" Style="{StaticResource BigLabelStyle}"/>
-                                <Span Text=" bpm" FontSize="20" Style="{StaticResource SubLabelStyle}"/>
-                                <Span Text="&#x0a;"/>
-                                <Span Text="Heart rate" Style="{StaticResource SubLabelStyle}"/>
+                                <Span Style="{StaticResource BigLabelStyle}" Text="87" />
+                                <Span
+                                    FontSize="20"
+                                    Style="{StaticResource SubLabelStyle}"
+                                    Text=" bpm" />
+                                <Span Text="&#x0a;" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text="Heart rate" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
                 </Grid>
-                <Button Grid.Row="2" Text="Profile" Command="{Binding GoToProfilePageCommand}" VerticalOptions="Center" HorizontalOptions="Center" Style="{StaticResource PrimaryButtonStyle}"/>
+                <Button
+                    Grid.Row="2"
+                    Command="{Binding GoToProfilePageCommand}"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource PrimaryButtonStyle}"
+                    Text="Profile"
+                    VerticalOptions="Center" />
             </Grid>
         </ScrollView>
     </ContentPage.Content>
