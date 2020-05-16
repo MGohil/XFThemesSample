@@ -21,20 +21,19 @@
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="150" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="70" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <Grid BackgroundColor="{DynamicResource PrimaryColor}">
+                    <Grid Padding="15,50,15,15" BackgroundColor="{DynamicResource PrimaryColor}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
                         <Label
                             Grid.Column="0"
-                            Margin="15"
-                            FontSize="Large"
+                            FontSize="Title"
                             VerticalOptions="End">
                             <Label.FormattedText>
                                 <FormattedString>
@@ -46,7 +45,6 @@
                         </Label>
                         <Frame
                             Grid.Column="1"
-                            Margin="15"
                             CornerRadius="50"
                             HasShadow="False"
                             HeightRequest="60"
@@ -107,10 +105,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Style="{StaticResource BigLabelStyle}" Text="36.75" />
-                                <Span
-                                    FontSize="20"
-                                    Style="{StaticResource SubLabelStyle}"
-                                    Text=" &#186;C" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" &#186;C" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Temperature" />
                             </FormattedString>
@@ -124,10 +119,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Style="{StaticResource BigLabelStyle}" Text="560" />
-                                <Span
-                                    FontSize="20"
-                                    Style="{StaticResource SubLabelStyle}"
-                                    Text=" cal" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" cal" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Calories burned" />
                             </FormattedString>
@@ -154,10 +146,7 @@
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Style="{StaticResource BigLabelStyle}" Text="87" />
-                                <Span
-                                    FontSize="20"
-                                    Style="{StaticResource SubLabelStyle}"
-                                    Text=" bpm" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" bpm" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Heart rate" />
                             </FormattedString>

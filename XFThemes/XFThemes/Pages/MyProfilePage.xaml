@@ -25,7 +25,7 @@
                     <Grid BackgroundColor="{DynamicResource TransperantBackgroundColor}">
                         <Label
                             Margin="15"
-                            FontSize="30"
+                            FontSize="Title"
                             Style="{StaticResource OverlayTitleLabelStyle}"
                             VerticalOptions="End">
                             <Label.FormattedText>
@@ -44,9 +44,9 @@
                     VerticalOptions="Start">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1" />
-                        <RowDefinition Height="100" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="1" />
-                        <RowDefinition Height="100" />
+                        <RowDefinition Height="Auto" />
                         <RowDefinition Height="1" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -84,11 +84,8 @@
                         VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Style="{StaticResource MediumLabelStyle}" Text="22" />
-                                <Span
-                                    FontSize="15"
-                                    Style="{StaticResource SubLabelStyle}"
-                                    Text=" years" />
+                                <Span Style="{StaticResource BigLabelStyle}" Text="22" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" years" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Age" />
                             </FormattedString>
@@ -101,7 +98,7 @@
                         VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Style="{StaticResource MediumLabelStyle}" Text="A" />
+                                <Span Style="{StaticResource BigLabelStyle}" Text="A" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Blood Group" />
                             </FormattedString>
@@ -114,7 +111,7 @@
                         VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Style="{StaticResource MediumLabelStyle}" Text="20.4" />
+                                <Span Style="{StaticResource BigLabelStyle}" Text="20.4" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="BMI" />
                             </FormattedString>
@@ -127,11 +124,8 @@
                         VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Style="{StaticResource MediumLabelStyle}" Text="172" />
-                                <Span
-                                    FontSize="15"
-                                    Style="{StaticResource SubLabelStyle}"
-                                    Text=" cm" />
+                                <Span Style="{StaticResource BigLabelStyle}" Text="172" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" cm" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Height" />
                             </FormattedString>
@@ -144,11 +138,8 @@
                         VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Style="{StaticResource MediumLabelStyle}" Text="53" />
-                                <Span
-                                    FontSize="15"
-                                    Style="{StaticResource SubLabelStyle}"
-                                    Text=" kg" />
+                                <Span Style="{StaticResource BigLabelStyle}" Text="53" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" kg" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Weight" />
                             </FormattedString>
@@ -161,11 +152,8 @@
                         VerticalOptions="Start">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Style="{StaticResource MediumLabelStyle}" Text="21" />
-                                <Span
-                                    FontSize="15"
-                                    Style="{StaticResource SubLabelStyle}"
-                                    Text=" %" />
+                                <Span Style="{StaticResource BigLabelStyle}" Text="21" />
+                                <Span Style="{StaticResource SubLabelStyle}" Text=" %" />
                                 <Span Text="&#x0a;" />
                                 <Span Style="{StaticResource SubLabelStyle}" Text="Fat" />
                             </FormattedString>

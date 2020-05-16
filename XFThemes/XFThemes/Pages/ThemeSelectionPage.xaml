@@ -16,14 +16,14 @@
             ios:ListView.SeparatorStyle="FullWidth"
             BackgroundColor="Transparent"
             Footer=""
+            HasUnevenRows="True"
             ItemsSource="{Binding Themes}"
-            RowHeight="70"
             SelectedItem="{Binding SelectedTheme, Mode=TwoWay}"
             SeparatorColor="{StaticResource SeparatorLineColor}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Margin="10" VerticalOptions="Center">
+                        <Grid Padding="15,10" VerticalOptions="Center">
                             <Label Style="{StaticResource TitleLabelStyle}">
                                 <Label.FormattedText>
                                     <FormattedString>

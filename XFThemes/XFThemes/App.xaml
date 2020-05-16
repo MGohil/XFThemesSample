@@ -16,13 +16,14 @@
         <Style x:Key="PrimaryButtonStyle" TargetType="Button">
             <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}" />
             <Setter Property="TextColor" Value="{DynamicResource PrimaryTintColor}" />
-            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="HeightRequest" Value="50" />
             <Setter Property="WidthRequest" Value="200" />
-            <Setter Property="CornerRadius" Value="20" />
+            <Setter Property="CornerRadius" Value="25" />
         </Style>
 
         <Style x:Key="TitleLabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontSize" Value="Title" />
             <Setter Property="TextColor" Value="{DynamicResource SecondaryTextColor}" />
         </Style>
 
@@ -32,17 +33,17 @@
         </Style>
 
         <Style x:Key="BigLabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="35" />
+            <Setter Property="FontSize" Value="Large" />
             <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
         </Style>
 
         <Style x:Key="MediumLabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="25" />
+            <Setter Property="FontSize" Value="Medium" />
             <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
         </Style>
 
         <Style x:Key="SubLabelStyle" TargetType="Label">
-            <Setter Property="FontSize" Value="15" />
+            <Setter Property="FontSize" Value="Small" />
             <Setter Property="TextColor" Value="{DynamicResource SubTextColor}" />
         </Style>
         <Style x:Key="HorizontalSeparatorLineStyle" TargetType="BoxView">
