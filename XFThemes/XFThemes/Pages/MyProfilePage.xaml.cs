@@ -12,7 +12,7 @@ namespace XFThemes
 
             //Primary Toolbar buttons
             //1. Edit (as Icon)
-            var editProfileToolbarItem = new ToolbarItem { Text = "EDIT", Icon = "editprofile" };
+            var editProfileToolbarItem = new ToolbarItem { Text = "EDIT", IconImageSource = "editprofile" };
             //2. SAVE (as Text)
             var saveProfileToolbarItem = new ToolbarItem { Text = "SAVE" };
             ToolbarItems.Add(editProfileToolbarItem);

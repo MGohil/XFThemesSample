@@ -7,6 +7,7 @@
     xmlns:local="clr-namespace:XFThemes"
     xmlns:vm="clr-namespace:XFThemes.ViewModels"
     Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
     BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.BindingContext>
         <vm:ThemeSelectionViewModel />

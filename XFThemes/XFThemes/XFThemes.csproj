@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netstandard1.6</TargetFramework>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
       <Compile Remove="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
+      <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.0.0.5" />
       <PackageReference Include="Xam.Plugins.Settings" Version="3.1.1" />
-      <PackageReference Include="Xamarin.Forms" Version="4.6.0.772" />
+      <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
     </ItemGroup>
     <ItemGroup>
       <Compile Update="ThemeResources\WhiteTheme.xaml.cs">

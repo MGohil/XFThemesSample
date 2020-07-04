@@ -3,9 +3,12 @@
     x:Class="XFThemes.DashboardPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:imageCircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:local="clr-namespace:XFThemes"
     xmlns:vm="clr-namespace:XFThemes.ViewModels"
     Title="{Binding Title}"
+    ios:Page.UseSafeArea="true"
     BackgroundColor="{DynamicResource PageBackgroundColor}">
     <ContentPage.BindingContext>
         <vm:DashboardViewModel />
@@ -43,7 +46,19 @@
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
-                        <Frame
+                        <imageCircle:CircleImage
+                            Grid.Column="1"
+                            Aspect="AspectFill"
+                            HeightRequest="100"
+                            HorizontalOptions="End"
+                            Source="monkeyprofile.jpg"
+                            VerticalOptions="End"
+                            WidthRequest="100">
+                            <imageCircle:CircleImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1" />
+                            </imageCircle:CircleImage.GestureRecognizers>
+                        </imageCircle:CircleImage>
+                        <!--<Frame
                             Grid.Column="1"
                             CornerRadius="50"
                             HasShadow="False"
@@ -61,7 +76,7 @@
                                     <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1" />
                                 </Image.GestureRecognizers>
                             </Image>
-                        </Frame>
+                        </Frame>-->
                     </Grid>
 
                 </Grid>
