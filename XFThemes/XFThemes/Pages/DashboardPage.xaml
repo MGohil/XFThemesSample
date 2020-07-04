@@ -58,25 +58,6 @@
                                 <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1" />
                             </imageCircle:CircleImage.GestureRecognizers>
                         </imageCircle:CircleImage>
-                        <!--<Frame
-                            Grid.Column="1"
-                            CornerRadius="50"
-                            HasShadow="False"
-                            HeightRequest="60"
-                            HorizontalOptions="End"
-                            IsClippedToBounds="True"
-                            VerticalOptions="End"
-                            WidthRequest="60">
-                            <Image
-                                Margin="-40"
-                                HeightRequest="100"
-                                Source="monkeyprofile.jpg"
-                                WidthRequest="100">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding GoToProfilePageCommand}" NumberOfTapsRequired="1" />
-                                </Image.GestureRecognizers>
-                            </Image>
-                        </Frame>-->
                     </Grid>
 
                 </Grid>

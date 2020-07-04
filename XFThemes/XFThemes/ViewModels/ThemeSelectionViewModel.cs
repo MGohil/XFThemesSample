@@ -59,7 +59,7 @@ namespace XFThemes.ViewModels
 
             //For Android we need some Platform specific twicks for Android Toolbar. 
             //Apply this platform specific change by invoking following DependencyService
-            if (Device.RuntimePlatform == Device.Android)
+            if (Device.RuntimePlatform == Device.Android || Device.RuntimePlatform == Device.UWP)
             {
                 DependencyService.Get<INativeServices>().OnThemeChanged(selectedTheme.ThemeId);
             }

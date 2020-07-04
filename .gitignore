@@ -9,3 +9,5 @@ XFThemes/XFThemes/obj/
 XFThemes/XFThemes.iOS/bin/
 /XFThemes/XFThemes.Android/XFThemes.Android.csproj.user
 /XFThemes/XFThemes.iOS/XFThemes.iOS.csproj.user
+/XFThemes/XFThemes.UWP/bin
+/XFThemes/XFThemes.UWP/XFThemes.UWP.csproj.user
